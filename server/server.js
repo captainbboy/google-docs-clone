@@ -31,6 +31,10 @@ io.on("connection", socket => {
       await Document.findByIdAndUpdate(documentId, { data })
     })
   })
+  socket.on("get-all-documents", async () => {
+    const documents = await findAllDocuments()
+    socket.emit("load-all-documents", documents)
+  })
 })
 
 async function findOrCreateDocument(id) {
@@ -38,5 +42,11 @@ async function findOrCreateDocument(id) {
 
   const document = await Document.findById(id)
   if (document) return document
-  return await Document.create({ _id: id, data: defaultValue })
+  return await Document.create({ _id: id, data: defaultValue, title: 'Untitled Document' })
+}
+
+async function findAllDocuments() {
+  let all = await Document.find({});
+  all = all.map(a=>a)
+  return all;
 }

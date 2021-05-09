@@ -1,4 +1,5 @@
 import TextEditor from "./TextEditor"
+import Drive from "./Drive"
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,7 +13,8 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact>
-          <Redirect to={`/documents/${uuidV4()}`} />
+          <Drive />
+          {/* <Redirect to={`/documents/${uuidV4()}`} /> */}
         </Route>
         <Route path="/documents/:id">
           <TextEditor />

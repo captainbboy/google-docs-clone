@@ -33,6 +33,21 @@ body {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
 }
 
+.driveElementsContainer {
+  display: flex;
+}
+
+.driveElementBox {
+  display: flex;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #121212;
+  height: 15rem;
+  width: 15rem;
+  padding: 10px;
+  text-align: center;
+}
+
 @page {
   margin: 1in;
 }
