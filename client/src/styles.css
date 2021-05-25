@@ -48,6 +48,38 @@ body {
   text-align: center;
 }
 
+.driveImageElement {
+  margin-left: 25%;
+  width: 50%;
+  height: fit-content;
+}
+
+.driveTitleElement {
+  margin-top: 60%;
+  margin-left: -75%;
+  font-size: 2vw;
+}
+
+.addDocumentContainer {
+  margin: 10px 0 0 10px;
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.addDocumentButton {
+  position: absolute;
+  right: 5.25%;
+  top: -10%;
+  font-size: 3vw;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
 @page {
   margin: 1in;
 }
